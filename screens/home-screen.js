@@ -1,13 +1,12 @@
 import { useNavigation } from "@react-navigation/native";
-import { View, Text, StyleSheet, Button } from "react-native";
+import { View, StyleSheet, Button, TextInput } from "react-native";
+import LoginScreen from "../components/Login/login-screen";
 
 const HomeScreen = () => {
     const navigation = useNavigation()
     return (
         <View style={styles.screen}>
-            <Text>This is a home screen</Text>
-            <Button title="move to profile" onPress={()=>navigation.navigate('Profile')} />
-            <Button title="move to register" onPress={()=>navigation.navigate('Register')} />
+            <LoginScreen />
         </View>
     );
 }
@@ -15,6 +14,9 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
     screen: {
         padding: 20,
+        backgroundColor: "yellow",
+        flex: 1,
+
     }
 })
 
