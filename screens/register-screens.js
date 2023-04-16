@@ -1,6 +1,8 @@
-import { View, Text, StyleSheet, TextInput, SafeAreaView} from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { View, Text, StyleSheet, TextInput, Button} from "react-native";
 
 const RegisterScreen = () => {
+    const navigation = useNavigation()
     return (
         <View style={styles.screen}>
             <View>
@@ -21,6 +23,9 @@ const RegisterScreen = () => {
             <View>
                 <TextInput style={styles.input6} placeholder="Password"
                 secureTextEntry={true}/>
+            </View>
+            <View style={styles.button1}>
+                <Button title="Submit" onPress={()=>navigation.navigate('Success')}/>
             </View>
         </View>
     );
@@ -94,6 +99,12 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         padding: 5,
         marginLeft: 35,
+    },
+    button1:{
+        padding: 5,
+        width: "80%",
+        marginLeft: 35,
+        alignItems: "center",
     },
 
 
