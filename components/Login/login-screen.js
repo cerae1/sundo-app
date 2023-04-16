@@ -6,8 +6,8 @@ const Login =  () => {
     return (
         <View style={styles.container}>
              {/* input for log in */}
-            <TextInput style={styles.input} placeholder="Email"/>
-            <TextInput style={styles.input} placeholder="Password"
+            <TextInput style={styles.input1} placeholder="Email"/>
+            <TextInput style={styles.input2} placeholder="Password"
             secureTextEntry={true}/>    
              {/* for different 2 buttons below is button 1 */}
                 <View style ={styles.buttoncontainer}>
@@ -22,7 +22,18 @@ const Login =  () => {
 }
 
 const styles = StyleSheet.create({
-    input: {
+    input1: {
+        borderColor: "grey",
+        backgroundColor: "white",
+        width: "100%",
+        borderWidth: 1,
+        borderRadius: 100,
+        padding: 10,
+        justifyContent: "center",
+        marginTop: 200,
+        marginBottom: 10,
+    },
+    input2: {
         borderColor: "grey",
         backgroundColor: "white",
         width: "100%",
@@ -33,12 +44,10 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     buttoncontainer: {
-        marginBottom: 10,
         width: "100%",
         padding: 10,
     },
     buttoncontainer2: {
-        marginBottom: 10,
         width: "100%",
         padding: 10,
     }
